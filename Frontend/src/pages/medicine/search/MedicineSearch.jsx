@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import SearchResults from "./components/SearchResults";
-import Pagination from "./components/Pagination";
+import Pagination from "./components/pagination";
 import { searchMedicines } from "../../../services/medicineService";
 
 import Loading from "../../../components/Loading";
