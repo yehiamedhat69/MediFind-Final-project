@@ -1,689 +1,265 @@
-﻿# MediFind
-
-
+# MediFind
 
 ## Medicine Availability & Reservation Platform
 
-
-
-MediFind is a full-stack web platform designed to help users search for medicines, check their availability in pharmacies, and make medicine reservations. The platform provides dedicated functionality for customers, pharmacies, and administrators.
-
-
-
-\---
-
-
-
-## 1. Project Name & Description
-
-
-
-\*\*Project Name:\*\* MediFind
-
-
-
-\*\*Description:\*\*
-
-MediFind connects customers with pharmacies through a centralized platform for medicine search, availability checking, and reservations.
-
-
-
-The system supports different user roles, including customers, pharmacies, and administrators, with secure authentication and role-based access control.
-
-
-
-\---
-
-
-
-## 2. Main Features
-
-
-
-### Customer Features
-
-
-
-\* User registration and login.
-
-\* Secure authentication using JWT.
-
-\* Search for medicines.
-
-\* Check medicine availability.
-
-\* View pharmacy information.
-
-\* Make and manage medicine reservations.
-
-\* Receive notifications.
-
-\* Manage user account information.
-
-
-
-### Pharmacy Features
-
-
-
-\* Pharmacy authentication and management.
-
-\* Manage medicines and inventory.
-
-\* Update medicine stock and availability.
-
-\* Manage customer reservations.
-
-\* Access pharmacy-related information.
-
-
-
-### Admin Features
-
-
-
-\* Administrative authentication and authorization.
-
-\* Manage users and pharmacies.
-
-\* Manage medicines and inventory.
-
-\* Monitor reservations.
-
-\* Manage platform data.
-
-
-
-### Security Features
-
-
-
-\* JWT-based authentication.
-
-\* Password hashing using bcryptjs.
-
-\* Role-based authorization.
-
-\* CORS configuration.
-
-\* Helmet security middleware.
-
-\* Centralized error handling.
-
-
-
-\---
-
-
-
-## 3. Technologies Used
-
-
+MediFind is a full-stack web platform that helps users search for medicines, check their availability in pharmacies, and make reservations. The system connects customers, pharmacies, and administrators through a secure and organized platform.
+
+---
+
+## Main Features
+
+* Search for medicines by name.
+* Check medicine availability in pharmacies.
+* View pharmacy and medicine information.
+* Reserve available medicines.
+* Customer account management.
+* Pharmacy management.
+* Inventory management.
+* Notifications.
+* Admin management and control.
+* Authentication and authorization using JWT.
+* Role-based access control for different users.
+* Secure password hashing.
+* MongoDB database integration.
+
+---
+
+## Technologies Used
 
 ### Frontend
 
-
-
-\* React 19
-
-\* Vite
-
-\* React Router
-
-\* Lucide React
-
-\* JavaScript
-
-\* ESLint
-
-
+* React.js
+* Vite
+* React Router
+* Lucide React
 
 ### Backend
 
-
-
-\* Node.js
-
-\* Express.js
-
-\* MongoDB
-
-\* Mongoose
-
-\* JWT
-
-\* bcryptjs
-
-\* CORS
-
-\* Helmet
-
-\* dotenv
-
-
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT
+* bcryptjs
+* CORS
+* Helmet
+* dotenv
 
 ### Database
 
+* MongoDB
+* Mongoose
 
+---
 
-\* MongoDB
+## Project Structure
 
-\* Mongoose
+```text
+MediFind-Final-project/
+│
+├── Backend/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   └── server.js
+│   └── package.json
+│
+├── Database/
+│   ├── mudels/
+│   ├── queries/
+│   ├── seed/
+│   └── README.md
+│
+├── Frontend/
+│   └── ...
+│
+├── docs/
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
+---
 
+## Installation Steps
 
-\---
-
-
-
-## 4. Installation Steps
-
-
-
-### Prerequisites
-
-
-
-Make sure the following are installed:
-
-
-
-\* Node.js
-
-\* npm
-
-\* MongoDB
-
-\* Git
-
-
-
-### Clone the Repository
-
-
+### 1. Clone the Repository
 
 ```bash
-
 git clone https://github.com/yehiamedhat69/MediFind-Final-project.git
-
 cd MediFind-Final-project
-
 ```
 
-
-
-### Install Backend Dependencies
-
-
+### 2. Install Backend Dependencies
 
 ```bash
-
 cd Backend
-
 npm install
-
 ```
 
+### 3. Install Frontend Dependencies
 
-
-### Install Frontend Dependencies
-
-
-
-Open a new terminal and run:
-
-
+Open another terminal:
 
 ```bash
-
 cd Frontend
-
 npm install
-
 ```
 
+### 4. Configure Environment Variables
 
-
-\---
-
-
-
-## 5. Required Environment Variables
-
-
-
-Create a `.env` file inside the `Backend` directory.
-
-
+Inside the `Backend` folder, create a `.env` file.
 
 Use the following variables:
 
-
-
 ```env
-
 PORT=3000
-
-MONGO\_URI=your\_mongodb\_connection\_string\_here
-
-JWT\_SECRET=your\_jwt\_secret\_key\_here
-
+MONGO_URI=your_mongodb_connection_string_here
+JWT_SECRET=your_jwt_secret_key_here
 ```
 
+Replace the values with your own MongoDB connection string and JWT secret.
 
+---
 
-### Environment Variables
+## Database Setup
 
+MediFind uses MongoDB with Mongoose.
 
+Make sure MongoDB is running and the `MONGO_URI` environment variable is configured correctly.
 
-| Variable     | Description                            |
+The database also includes seed data that can be used to populate the required initial data.
 
-| ------------ | -------------------------------------- |
-
-| `PORT`       | Port used by the backend server        |
-
-| `MONGO\_URI`  | MongoDB connection string              |
-
-| `JWT\_SECRET` | Secret key used for JWT authentication |
-
-
-
-> Never commit your `.env` file or expose your MongoDB credentials or JWT secret.
-
-
-
-\---
-
-
-
-## 6. How to Run Backend and Frontend
-
-
-
-### Run Backend
-
-
-
-Navigate to the Backend directory:
-
-
+From the project root:
 
 ```bash
-
-cd Backend
-
+npm install
+npm run seed
 ```
 
+---
 
+## How to Run the Backend
+
+Navigate to the Backend folder:
+
+```bash
+cd Backend
+```
 
 For development:
 
-
-
 ```bash
-
 npm run dev
-
 ```
 
-
-
-For normal execution:
-
-
+Or to run normally:
 
 ```bash
-
 npm start
-
 ```
 
+The backend
+runs on:
 
+```text
+http://localhost:3000
+```
 
-The backend runs on the port specified in the `.env` file.
+---
 
+## How to Run the Frontend
 
-
-### Run Frontend
-
-
-
-Open another terminal and navigate to the Frontend directory:
-
-
+Navigate to the Frontend folder:
 
 ```bash
-
 cd Frontend
-
 ```
 
-
-
-Run the development server:
-
-
+Run:
 
 ```bash
-
 npm run dev
-
 ```
 
-
-
-Vite will display the local development URL in the terminal.
-
-
-
-### Build Frontend
-
-
-
-To create a production build:
-
-
-
-```bash
-
-npm run build
-
-```
-
-
-
-\---
-
-
-
-## 7. API Overview
-
-
-
-The backend provides REST API endpoints for the main MediFind functionalities.
-
-
-
-### Authentication
-
-
-
-\* User registration
-
-\* User login
-
-\* JWT authentication
-
-\* Authorization
-
-
-
-### Users
-
-
-
-\* User account management
-
-\* User profile operations
-
-
-
-### Pharmacies
-
-
-
-\* Pharmacy management
-
-\* Pharmacy-related operations
-
-
-
-### Medicines
-
-
-
-\* Medicine management
-
-\* Medicine search
-
-
-
-### Inventory
-
-
-
-\* Inventory management
-
-\* Medicine stock and availability
-
-
-
-### Reservations
-
-
-
-\* Create and manage medicine reservations
-
-
-
-### Notifications
-
-
-
-\* Notification management
-
-
-
-### Administration
-
-
-
-\* Administrative operations
-
-\* User and pharmacy management
-
-
-
-The API routes are organized inside:
-
-
+Vite will provide the local development URL in the terminal, usually:
 
 ```text
+http://localhost:5173
+```
 
+---
+
+## API Overview
+
+The backend provides RESTful API endpoints for:
+
+* Authentication
+* Users
+* Medicines
+* Medicine Search
+* Pharmacies
+* Inventory
+* Reservations
+* Notifications
+* Admin operations
+
+Main route files include:
+
+```text
+/auth
+/users
+/medicines
+/medicine-search
+/pharmacies
+/inventory
+/reservations
+/notifications
+/admin
+```
+
+The API implementation can be found inside:
+
+```text
 Backend/src/routes/
-
 ```
 
+---
 
+## Team Members & Contributions
 
-Available route modules include:
+| Team Member                             | Contribution                               |
+| --------------------------------------- | ------------------------------------------ |
+| Abdulrahman Mohamed Mohamed Abdulrahman | Database                                   |
+| Yehia Medhat                            | Tasks 1, 3, 4, 8, 9 + Backend              |
+| Abdelrahman Samy                        | Tasks 2, 5, 10, 11, 14 + Backend           |
+| Hossam                                  | Tasks 6, 7, 12, 13, 15 + Backend           |
+| Abdullah Fathy Mohamed Fathy            | Frontend Tasks 2, 10, 11                   |
+| Taha Ashraf Taha                        | Frontend Tasks 3, 14, 15                   |
+| Shahd Mohy                              | Frontend Tasks 3, 13, 17                   |
+| Adham Marwan                            | Frontend Tasks 1, 4, 5, 6, 7, 8, 9, 12, 18 |
 
+---
 
+## Demo
 
-```text
-
-adminRoutes.js
-
-authRoutes.js
-
-inventoryRoutes.js
-
-medicineRoutes.js
-
-medicineSearchRoutes.js
-
-notificationRoutes.js
-
-pharmacyRoutes.js
-
-reservationRoutes.js
-
-userRoutes.js
-
-```
-
-
-
-\---
-
-
-
-## 8. Project Structure
-
-
-
-```text
-
-MediFind-Final-project/
-
-â”‚
-
-â”œâ”€â”€ Backend/
-
-â”‚   â”œâ”€â”€ src/
-
-â”‚   â”‚   â”œâ”€â”€ config/
-
-â”‚   â”‚   â”œâ”€â”€ controllers/
-
-â”‚   â”‚   â”œâ”€â”€ middleware/
-
-â”‚   â”‚   â”œâ”€â”€ models/
-
-â”‚   â”‚   â”œâ”€â”€ routes/
-
-â”‚   â”‚   â”œâ”€â”€ services/
-
-â”‚   â”‚   â”œâ”€â”€ utils/
-
-â”‚   â”‚   â””â”€â”€ server.js
-
-â”‚   â””â”€â”€ .env.example
-
-â”‚
-
-â”œâ”€â”€ Database/
-
-â”‚   â”œâ”€â”€ mudels/
-
-â”‚   â”œâ”€â”€ queries/
-
-â”‚   â”œâ”€â”€ seed/
-
-â”‚   â””â”€â”€ README.md
-
-â”‚
-
-â”œâ”€â”€ Frontend/
-
-â”‚   â”œâ”€â”€ public/
-
-â”‚   â”œâ”€â”€ src/
-
-â”‚   â”œâ”€â”€ package.json
-
-â”‚   â””â”€â”€ vite.config.js
-
-â”‚
-
-â”œâ”€â”€ docs/
-
-â”œâ”€â”€ package.json
-
-â””â”€â”€ README.md
-
-```
-
-
-
-\---
-
-
-
-## 9. Team Members and Contributions
-
-
-
-### Database
-
-
-
-| Team Member                             | Role     | Contributions                                   |
-
-| --------------------------------------- | -------- | ----------------------------------------------- |
-
-| Abdulrahman Mohamed Mohamed Abdulrahman | Database | Database development and database-related tasks |
-
-
-
-### Backend
-
-
-
-| Team Member      | Role    | Contributions          |
-
-| ---------------- | ------- | ---------------------- |
-
-| Yehia Medhat     | Backend | Tasks 1, 3, 4, 8, 9    |
-
-| Abdelrahman Samy | Backend | Tasks 2, 5, 10, 11, 14 |
-
-| Hossam           | Backend | Tasks 6, 7, 12, 13, 15 |
-
-
-
-### Frontend
-
-
-
-| Team Member                  | Role     | Contributions                     |
-
-| ---------------------------- | -------- | --------------------------------- |
-
-| Abdullah Fathy Mohamed Fathy | Frontend | Tasks 2, 10, 11                   |
-
-| Taha Ashraf Taha             | Frontend | Tasks 3, 14, 15                   |
-
-| Shahd Mohy                   | Frontend | Tasks 3, 13, 17                   |
-
-| Adham Marwan                 | Frontend | Tasks 1, 4, 5, 6, 7, 8, 9, 12, 18 |
-
-
-
-\---
-
-
-
-## 10. Demo / Live Demo
-
-
-
-\*\*Live Demo:\*\*
+Live Demo:
 
 https://medi-find-final-project.vercel.app
 
-
+---
 
 ## GitHub Repository
 
-
-
-\*\*Repository:\*\*
-
 https://github.com/yehiamedhat69/MediFind-Final-project
 
-
-
-\---
-
-
+---
 
 ## License
 
-
-
-This project was developed as a team project for educational and practical purposes.
-
-
-
-
+This project was developed as part of an academic team project.
