@@ -1,5 +1,5 @@
 export const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:3000/api";
+  import.meta.env.VITE_API_URL || "https://medifind-final-project.onrender.com/api";
 
 export const getToken = () => localStorage.getItem("token");
 
