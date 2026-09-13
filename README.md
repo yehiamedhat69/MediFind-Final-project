@@ -1,8 +1,8 @@
-\# MediFind
+﻿# MediFind
 
 
 
-\## Medicine Availability \& Reservation Platform
+## Medicine Availability & Reservation Platform
 
 
 
@@ -14,7 +14,7 @@ MediFind is a full-stack web platform designed to help users search for medicine
 
 
 
-\## 1. Project Name \& Description
+## 1. Project Name & Description
 
 
 
@@ -36,11 +36,11 @@ The system supports different user roles, including customers, pharmacies, and a
 
 
 
-\## 2. Main Features
+## 2. Main Features
 
 
 
-\### Customer Features
+### Customer Features
 
 
 
@@ -62,7 +62,7 @@ The system supports different user roles, including customers, pharmacies, and a
 
 
 
-\### Pharmacy Features
+### Pharmacy Features
 
 
 
@@ -78,7 +78,7 @@ The system supports different user roles, including customers, pharmacies, and a
 
 
 
-\### Admin Features
+### Admin Features
 
 
 
@@ -94,7 +94,7 @@ The system supports different user roles, including customers, pharmacies, and a
 
 
 
-\### Security Features
+### Security Features
 
 
 
@@ -116,11 +116,11 @@ The system supports different user roles, including customers, pharmacies, and a
 
 
 
-\## 3. Technologies Used
+## 3. Technologies Used
 
 
 
-\### Frontend
+### Frontend
 
 
 
@@ -138,7 +138,7 @@ The system supports different user roles, including customers, pharmacies, and a
 
 
 
-\### Backend
+### Backend
 
 
 
@@ -162,7 +162,7 @@ The system supports different user roles, including customers, pharmacies, and a
 
 
 
-\### Database
+### Database
 
 
 
@@ -176,11 +176,11 @@ The system supports different user roles, including customers, pharmacies, and a
 
 
 
-\## 4. Installation Steps
+## 4. Installation Steps
 
 
 
-\### Prerequisites
+### Prerequisites
 
 
 
@@ -198,7 +198,7 @@ Make sure the following are installed:
 
 
 
-\### Clone the Repository
+### Clone the Repository
 
 
 
@@ -212,7 +212,7 @@ cd MediFind-Final-project
 
 
 
-\### Install Backend Dependencies
+### Install Backend Dependencies
 
 
 
@@ -226,7 +226,7 @@ npm install
 
 
 
-\### Install Frontend Dependencies
+### Install Frontend Dependencies
 
 
 
@@ -248,7 +248,7 @@ npm install
 
 
 
-\## 5. Required Environment Variables
+## 5. Required Environment Variables
 
 
 
@@ -272,7 +272,7 @@ JWT\_SECRET=your\_jwt\_secret\_key\_here
 
 
 
-\### Environment Variables
+### Environment Variables
 
 
 
@@ -296,11 +296,11 @@ JWT\_SECRET=your\_jwt\_secret\_key\_here
 
 
 
-\## 6. How to Run Backend and Frontend
+## 6. How to Run Backend and Frontend
 
 
 
-\### Run Backend
+### Run Backend
 
 
 
@@ -344,7 +344,7 @@ The backend runs on the port specified in the `.env` file.
 
 
 
-\### Run Frontend
+### Run Frontend
 
 
 
@@ -376,7 +376,7 @@ Vite will display the local development URL in the terminal.
 
 
 
-\### Build Frontend
+### Build Frontend
 
 
 
@@ -396,7 +396,7 @@ npm run build
 
 
 
-\## 7. API Overview
+## 7. API Overview
 
 
 
@@ -404,7 +404,7 @@ The backend provides REST API endpoints for the main MediFind functionalities.
 
 
 
-\### Authentication
+### Authentication
 
 
 
@@ -418,7 +418,7 @@ The backend provides REST API endpoints for the main MediFind functionalities.
 
 
 
-\### Users
+### Users
 
 
 
@@ -428,7 +428,7 @@ The backend provides REST API endpoints for the main MediFind functionalities.
 
 
 
-\### Pharmacies
+### Pharmacies
 
 
 
@@ -438,7 +438,7 @@ The backend provides REST API endpoints for the main MediFind functionalities.
 
 
 
-\### Medicines
+### Medicines
 
 
 
@@ -448,7 +448,7 @@ The backend provides REST API endpoints for the main MediFind functionalities.
 
 
 
-\### Inventory
+### Inventory
 
 
 
@@ -458,7 +458,7 @@ The backend provides REST API endpoints for the main MediFind functionalities.
 
 
 
-\### Reservations
+### Reservations
 
 
 
@@ -466,7 +466,7 @@ The backend provides REST API endpoints for the main MediFind functionalities.
 
 
 
-\### Notifications
+### Notifications
 
 
 
@@ -474,7 +474,7 @@ The backend provides REST API endpoints for the main MediFind functionalities.
 
 
 
-\### Administration
+### Administration
 
 
 
@@ -528,7 +528,7 @@ userRoutes.js
 
 
 
-\## 8. Project Structure
+## 8. Project Structure
 
 
 
@@ -536,61 +536,61 @@ userRoutes.js
 
 MediFind-Final-project/
 
-│
+â”‚
 
-├── Backend/
+â”œâ”€â”€ Backend/
 
-│   ├── src/
+â”‚   â”œâ”€â”€ src/
 
-│   │   ├── config/
+â”‚   â”‚   â”œâ”€â”€ config/
 
-│   │   ├── controllers/
+â”‚   â”‚   â”œâ”€â”€ controllers/
 
-│   │   ├── middleware/
+â”‚   â”‚   â”œâ”€â”€ middleware/
 
-│   │   ├── models/
+â”‚   â”‚   â”œâ”€â”€ models/
 
-│   │   ├── routes/
+â”‚   â”‚   â”œâ”€â”€ routes/
 
-│   │   ├── services/
+â”‚   â”‚   â”œâ”€â”€ services/
 
-│   │   ├── utils/
+â”‚   â”‚   â”œâ”€â”€ utils/
 
-│   │   └── server.js
+â”‚   â”‚   â””â”€â”€ server.js
 
-│   └── .env.example
+â”‚   â””â”€â”€ .env.example
 
-│
+â”‚
 
-├── Database/
+â”œâ”€â”€ Database/
 
-│   ├── mudels/
+â”‚   â”œâ”€â”€ mudels/
 
-│   ├── queries/
+â”‚   â”œâ”€â”€ queries/
 
-│   ├── seed/
+â”‚   â”œâ”€â”€ seed/
 
-│   └── README.md
+â”‚   â””â”€â”€ README.md
 
-│
+â”‚
 
-├── Frontend/
+â”œâ”€â”€ Frontend/
 
-│   ├── public/
+â”‚   â”œâ”€â”€ public/
 
-│   ├── src/
+â”‚   â”œâ”€â”€ src/
 
-│   ├── package.json
+â”‚   â”œâ”€â”€ package.json
 
-│   └── vite.config.js
+â”‚   â””â”€â”€ vite.config.js
 
-│
+â”‚
 
-├── docs/
+â”œâ”€â”€ docs/
 
-├── package.json
+â”œâ”€â”€ package.json
 
-└── README.md
+â””â”€â”€ README.md
 
 ```
 
@@ -600,11 +600,11 @@ MediFind-Final-project/
 
 
 
-\## 9. Team Members and Contributions
+## 9. Team Members and Contributions
 
 
 
-\### Database
+### Database
 
 
 
@@ -616,7 +616,7 @@ MediFind-Final-project/
 
 
 
-\### Backend
+### Backend
 
 
 
@@ -632,7 +632,7 @@ MediFind-Final-project/
 
 
 
-\### Frontend
+### Frontend
 
 
 
@@ -654,7 +654,7 @@ MediFind-Final-project/
 
 
 
-\## 10. Demo / Live Demo
+## 10. Demo / Live Demo
 
 
 
@@ -664,7 +664,7 @@ https://medi-find-final-project.vercel.app
 
 
 
-\## GitHub Repository
+## GitHub Repository
 
 
 
@@ -678,11 +678,12 @@ https://github.com/yehiamedhat69/MediFind-Final-project
 
 
 
-\## License
+## License
 
 
 
 This project was developed as a team project for educational and practical purposes.
+
 
 
 
