@@ -1,0 +1,166 @@
+.pharmacy-notifications-page {
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f7f9fc;
+}
+
+.pharmacy-notifications-header {
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.pharmacy-notifications-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  color: #1f2937;
+}
+
+.pharmacy-notifications-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.notifications-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notification-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.notification-card:hover {
+  transform: translateY(-2px);
+}
+
+.notification-card.unread {
+  background-color: #eef6ff;
+  border-left: 4px solid #2563eb;
+}
+
+.notification-card.read {
+  background-color: white;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-message {
+  margin: 0 0 8px;
+  color: #1f2937;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.notification-card.unread .notification-message {
+  font-weight: 600;
+}
+
+.notification-date {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.mark-read-btn {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.mark-read-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.notification-state {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  color: #6b7280;
+}
+
+.notification-state p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.error-state {
+  color: #dc2626;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .pharmacy-notifications-page {
+    padding: 30px 20px;
+  }
+
+  .pharmacy-notifications-header h1 {
+    font-size: 28px;
+  }
+
+  .notification-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mark-read-btn {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .pharmacy-notifications-page {
+    padding: 20px 15px;
+  }
+
+  .pharmacy-notifications-header {
+    margin-bottom: 20px;
+  }
+
+  .pharmacy-notifications-header h1 {
+    font-size: 24px;
+  }
+
+  .pharmacy-notifications-header p {
+    font-size: 14px;
+  }
+
+  .notification-card {
+    padding: 16px;
+  }
+
+  .notification-message {
+    font-size: 14px;
+  }
+
+  .mark-read-btn {
+    padding: 10px;
+  }
+}

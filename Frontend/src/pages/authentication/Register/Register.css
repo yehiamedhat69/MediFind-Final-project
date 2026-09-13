@@ -1,0 +1,239 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f4fbfa 0%, #eef6fb 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 1050px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.register-brand {
+  padding: 20px;
+}
+
+.register-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0f9d8a, #1976d2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 25px rgba(25, 118, 210, 0.2);
+}
+
+.register-logo span {
+  color: white;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.register-brand h1 {
+  margin: 0 0 14px;
+  font-size: 48px;
+  color: #17324d;
+  letter-spacing: -1.5px;
+}
+
+.register-brand h1 span {
+  color: #159b89;
+}
+
+.register-brand p {
+  margin: 0;
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.register-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 38px 42px;
+  box-shadow: 0 18px 50px rgba(30, 65, 90, 0.1);
+  border: 1px solid #e7eef3;
+}
+
+.register-header {
+  margin-bottom: 25px;
+}
+
+.register-header h2 {
+  margin: 0 0 8px;
+  color: #17324d;
+  font-size: 30px;
+}
+
+.register-header p {
+  margin: 0;
+  color: #718096;
+  font-size: 15px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #334e68;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border: 1px solid #d9e3ea;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  color: #243b53;
+  background: #fbfdfe;
+  transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #159b89;
+  box-shadow: 0 0 0 3px rgba(21, 155, 137, 0.1);
+  background: #ffffff;
+}
+
+.form-group input::placeholder {
+  color: #9aa8b5;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  padding-right: 70px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #1976d2;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.input-error {
+  border-color: #e05252 !important;
+}
+
+.error-message {
+  color: #d64545;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.register-submit {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #159b89, #1976d2);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: 0.2s ease;
+  box-shadow: 0 8px 18px rgba(25, 118, 210, 0.18);
+}
+
+.register-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(25, 118, 210, 0.24);
+}
+
+.register-switch {
+  text-align: center;
+  margin: 23px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.register-switch a {
+  color: #159b89;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-switch a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .register-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 520px;
+  }
+
+  .register-brand {
+    text-align: center;
+    padding: 0;
+  }
+
+  .register-logo {
+    margin: 0 auto 18px;
+  }
+
+  .register-brand h1 {
+    font-size: 40px;
+  }
+
+  .register-brand p {
+    font-size: 16px;
+  }
+
+  .register-card {
+    padding: 32px 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .register-page {
+    padding: 25px 15px;
+  }
+
+  .register-card {
+    padding: 28px 20px;
+    border-radius: 17px;
+  }
+
+  .register-header h2 {
+    font-size: 25px;
+  }
+}

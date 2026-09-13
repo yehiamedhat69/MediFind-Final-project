@@ -1,0 +1,12 @@
+{
+  "name": "medifind-database-task",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MediFind MongoDB/Mongoose database task",
+  "scripts": {
+    "seed": "node database/seed/seed.js"
+  },
+  "dependencies": {
+    "mongoose": "^8.0.0"
+  }
+}
